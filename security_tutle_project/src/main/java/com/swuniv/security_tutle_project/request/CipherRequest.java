@@ -9,7 +9,8 @@ import lombok.Setter;
 @Builder
 public class CipherRequest {
     private String domain;
-    private boolean isUpperCaseChecked;
-    private boolean isSpecialCharacterChecked;
-    private Long stringLength;
+    private String upperCaseNum;
+    private String specialCharNum;
+    private String cipherKey;
+    private String stringLength;
 }

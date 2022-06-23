@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="js/resetPass.js"></script>
+    <title>비밀번호 재설정 페이지</title>
+</head>
+<body>
+    <h1>Reset Password</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Reset Password</legend>
+            <p>
+                Password must contain at least 7 characters long,
+                including at least one lowercase and one numeric character.
+            </p>
+            <p>
+                <label for="pw">Password</label>
+                <input type="password" id="pw" name="my_password" minlength="4" maxlength="12" size="15" pattern="[a-zA-Z0-9]{4,12}" title="4~12자의 영문 대소문자와 숫자로만 입력."required/>
+            </p>
+            <p>
+                <label for="pw_cf">Password Confirm</label>
+                <input type="password" id="pw_cf" name="my_password_confirm" onkeyup="check_pw()" maxlength="12" size="15" required> 
+            <span id="pw_check_msg"></span> 
+            </p>
+        </fieldset>
+        <input type="submit" value="Complete">
+    </form>
+</body>
+</html>

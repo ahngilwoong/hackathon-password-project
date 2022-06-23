@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본페이지</title>
+</head>
+<body>
+<ul>
+    <li>
+        <a>프로젝트</a>
+    </li>
+</ul>
+<table>
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>관리자</th>
+        <th>상태</th>
+    </tr>
+    <tr th:each="cipher : ${lists}">
+        <td th:text="${cipher.userCipher}"></td>
+        <td>
+            <a th:href="'/mockdooray/projects/' + ${project.projectNum}" th:text="${project.projectName}"></a>
+        </td>
+        <td th:text="${project.adminNum}"></td>
+        <td th:text="${project.projectStatus}"></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

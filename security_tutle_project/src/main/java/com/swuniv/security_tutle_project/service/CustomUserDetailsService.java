@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -22,9 +23,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Account accountUser = accountRepository.findByUserId(username)
-                .orElseThrow(() -> new UserNotFoundException(username + " This user does not exist"));
-        return new User(accountUser.getUserId(), accountUser.getUserPassword(), Collections.singletonList(new SimpleGrantedAuthority("ROLE_MEMBER")));
+        Optional<Account> accountUser = accountRepository.findByUserId(username);
+        return new User(accountUser.get().getUserId(), accountUser.get().getUserPassword(), Collections.singletonList(new SimpleGrantedAuthority("ROLE_MEMBER")));
     }
 
 

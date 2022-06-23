@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta charset="UTF-8">
+    <script src="../pcw/js/passCreate.js"></script>
+    <title>비밀번호 생성 페이지</title>
+</head>
+<body>
+    <h1>PCW</h1>
+    <h3>비밀번호 생성기 및 강력한 보안통합관리 시스템</h3>
+    <form method="post" action="/login">
+        도메인 입력: <input type="text" name="domain" /><br />
+        대문자 추가 여부(1 추가 0 현상유지) <input type="text" name="upperCaseNum" /><br />
+        특수문자 추가 여부(1 추가 0 현상유지) <input type="text" name="specialCharNum" /><br />
+        사용할 키 입력: <input type="text" name="cipherKey" /><br />
+        원하는 비밀번호 길이 입력: <input type="text" name="stringLength" /><br />
+        <input type="submit" />
+    </form>
+    <h1>생성된 암호문</h1>
+    <ul>
+        <li><span th:text="${data}"></span></li>
+    </ul>
+</body>
+</html>

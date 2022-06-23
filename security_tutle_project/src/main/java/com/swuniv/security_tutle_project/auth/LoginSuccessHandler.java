@@ -1,6 +1,9 @@
 package com.swuniv.security_tutle_project.auth;
 
 
+import com.swuniv.security_tutle_project.repository.AccountRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,7 +16,6 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
 
 
@@ -28,7 +30,6 @@ public class LoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessH
         HttpSession session = request.getSession(false);
 
 
-        session.setAttribute("username", userDetails.getUsername());
         session.setAttribute("authority", authorities.get(0).getAuthority());
         session.setAttribute("id",userDetails.getUsername());
 

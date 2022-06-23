@@ -21,7 +21,7 @@ public class CipherService {
     private final CipherKeyRepository cipherKeyRepository;
     private final CipherRepository cipherRepository;
 
-    public List<CipherResponse> getRegisterCipherList(String userId) {
+    public List<CipherResponse> findRegisterCipherList(String userId) {
         return cipherRepository.findByCipherKey_UserUserId(userId)
                 .stream()
                 .map(CipherResponse::new)

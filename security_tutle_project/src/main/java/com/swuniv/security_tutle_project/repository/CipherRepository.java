@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CipherRepository extends JpaRepository<Cipher, Long> {
-    List<CipherResponse> findByCipherKey_UserUserId(String userId);
+    List<Cipher> findByCipherKey_UserUserId(String userId);
 }

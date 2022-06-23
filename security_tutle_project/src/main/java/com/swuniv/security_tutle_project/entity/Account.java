@@ -20,7 +20,6 @@ public class Account {
     private String userId;
     private String userPassword;
     private String userName;
-    private String userEmail;
-    @Column(name = "user_birthday")
-    private String userBirthDay;
+    private String userIntegrationPwd;
+
 }

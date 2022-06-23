@@ -12,15 +12,15 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Table(name = "cypherkey")
-public class CypherKey {
+@Table(name = "cipherkey")
+public class CipherKey {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cypherkey_num", nullable = false)
-    private Long cypherKeyNum;
+    @Column(name = "cipherkey_num", nullable = false)
+    private Long cipherKeyNum;
     @ManyToOne
     @JoinColumn(name = "user_num")
     private Account user;
     private String domainName;
-    private String cypherKey;
+    private String cipherKey;
 }

@@ -20,8 +20,6 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/**","/login")
                 .authenticated()
-//                .antMatchers("/dooray/**","/login")
-//                .authenticated()
             .anyRequest().permitAll()
             .and().formLogin()
                 .successHandler(loginSuccessHandler())

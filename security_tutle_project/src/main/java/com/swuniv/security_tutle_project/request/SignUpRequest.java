@@ -1,9 +1,7 @@
-package com.swuniv.security_tutle_project.response;
+package com.swuniv.security_tutle_project.request;
 
 
 import lombok.*;
-
-import javax.persistence.Column;
 
 @Getter
 @Setter
@@ -11,8 +9,7 @@ import javax.persistence.Column;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class AccountResponse {
-    private Long userNum;
+public class SignUpRequest {
     private String userId;
     private String userPassword;
     private String userName;

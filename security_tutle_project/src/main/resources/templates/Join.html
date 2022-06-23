@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 페이지</title>
+    <script src="/js/joincheck.js"></script>
+</head>
+<body>
+    <form action="/register" method="post">
+        <fieldset>
+            <legend></legend>
+            <p>
+                <label for="userName">username</label>
+                <input type="text" name="userName" id="userName" size="20" required>
+            </p>
+
+            <p>
+                <label for="userId">ID</label>
+                <input type="text" name="userId" id="userId" minlength="4" maxlength="12" size="15" pattern="[a-zA-Z0-9]{4,12}" title="4~12자의 영문 대소문자와 숫자로만 입력." required/>
+            </p>
+
+            <p>
+                <label for="userPassword">Pass word</label>
+                <input type="password" id="userPassword" name="userPassword" minlength="4" maxlength="12" size="15" pattern="[a-zA-Z0-9]{4,12}" title="4~12자의 영문 대소문자와 숫자로만 입력."required/>
+            </p>
+
+            <p>
+                <label for="userIntegrationPwd">Integration password</label>
+                <input type="password" id="userIntegrationPwd" name="userIntegrationPwd" size="16" required/>
+            </p>
+
+
+        </fieldset>
+            <p>
+                <input type="submit" onclick="form_check()"  value="회원가입">
+                <input type="reset"  value="다시 입력">
+            </p>
+    </form>
+    <p>
+        <label>
+            <input type='checkbox'
+                   id='my_checkbox_2'
+                   onclick='is_checked_2()'
+            > 개인정보제3자제공동의
+        </label>
+    <pre id='result_2'>
+                </pre>
+    </p>
+    <p>
+        <label>
+            <input type='checkbox'
+                   id='my_checkbox_1'
+                   onclick='is_checked_1()'
+            > 개인정보수집/이용동의
+        </label>
+    <pre id='result_1'>
+                </pre>
+    </p>
+
+    <p>
+        <a href=""><button type="button">전문보기</button></a>
+    </p>
+    <p><a href="perInfo.html">perInfo</a></p>
+</body>
+</html>

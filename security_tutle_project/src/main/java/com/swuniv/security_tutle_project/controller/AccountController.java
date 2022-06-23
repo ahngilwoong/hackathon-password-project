@@ -22,13 +22,13 @@ public class AccountController {
 
     @GetMapping("/register")
     public String registerUser() {
-        return "register";
+        return "Join";
     }
 
     @PostMapping("/register")
     public String doRegisterUser(@ModelAttribute SignUpRequest signUpRequest, BindingResult bindingResult){
         if (bindingResult.hasErrors()) {
-            return "register";
+            return "Join";
         }
         accountService.doSignUp(signUpRequest);
         return "redirect:/";
@@ -47,6 +47,21 @@ public class AccountController {
         HttpSession session = httpServletRequest.getSession(false);
         accountService.updateUserPassword((String) session.getAttribute("id"),passwordRequest);
         return "redirect:/";
+    }
+
+    @GetMapping("/check-password")
+    public String checkPassword(){
+        return "check-password";
+    }
+
+    @PostMapping("/check-password")
+    public String doCheckPassword(@ModelAttribute PasswordRequest passwordRequest, HttpServletRequest httpServletRequest, BindingResult bindingResult){
+        if (bindingResult.hasErrors()) {
+            return "check-password";
+        }
+        HttpSession session = httpServletRequest.getSession(false);
+        accountService.isIntegrationPwdChecked((String) session.getAttribute("id"),passwordRequest);
+        return "cipher";
     }
 
 }

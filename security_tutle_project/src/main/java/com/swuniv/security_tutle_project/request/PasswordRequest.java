@@ -5,5 +5,5 @@ import lombok.*;
 
 @Getter
 public class PasswordRequest {
-    String replacePwd;
+    private String password;
 }

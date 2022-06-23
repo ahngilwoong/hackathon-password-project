@@ -1,26 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>예제 프로젝트</title>
+    <title>메인 페이지</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
+    <img class="turtle1" src="/img/turtle1.png" alt="turtle1">
+    <img class="line3" src="/img/Line3.png" alt="line3">
+    <img id="Rec34_1" src="/img/Rectangle34_1.png" alt="Rec34">
 
-<ul>
-    <li>
-        <a href="http://192.168.0.1/dddd">어디로 이동~ </a>
-    </li>
-    <li>
-        <a href="/login">로그인</a>
-    </li>
-    <li>
-        <a href="/logout">로그아웃</a>
-    </li>
-    <li>
-        <a href="/register">회원가입</a>
-    </li>
-</ul>
+    <img id="pcw" src="img/PC.png" alt="PCW">
+    <p class="h3">비밀번호 생성기 및 강력한 보안통합관리 시스템 
+        설명 추가 도메인을 관리할 수 있습니다.</p>
+    <form action="#" method="post">
+        <fieldset>
+            <a href="/register"><input id="btn_Join" name="btn_join" value="회원가입"></a>
+            <a href="/login"><input id="btn_Login" name="btn_login" value="로그인"></a>
+        </fieldset>
+    </form>
+    <img id="Rec30_1" src="img/Rectangle30.png" alt="Rec30">
+    <a href="/register"><p id="p_1">회원가입</p></a>
 
+    <img id="Rec30_2" src="img/Rectangle30.png" alt="Rec30">
+    <a href="/login"><p>로그인</p></a>
+
+    <img id="Rec34_2" src="img/Rectangle34_2.png" alt="Rec34">
 </body>
 </html>

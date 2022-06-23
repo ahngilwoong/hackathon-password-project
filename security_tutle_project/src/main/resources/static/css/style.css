@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;
+   font-family: 'Noto Sans', 'Roboto';}
+
+#Rec30_1 {
+    background: rgba(238,181,64,1);
+    width: 234px;
+    height: 83px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+  
+}
+
+#Rec30_2 {
+    background: rgba(238,181,64,1);
+    width: 234px;
+    height: 83px;
+    position: absolute;
+    left: 982px;
+    top: 687px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+}
+
+.turtle1 {
+    width: 87px;
+    height: 71px;
+    background: url(../img/turtle1.png);
+ }
+
+.line3 {
+    position: absolute;
+    width: 1582px;
+    height: 0px;
+    left: 169px;
+    top: 49px;
+    border: 5px solid #F5EDCF;
+}
+
+#Rec34_1 {
+    position: absolute;
+    width: 1920px;
+    height: 95px;
+    left: 0px;
+    top: 0px;
+    background: #466E47;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#Rec34_2 {
+    position: absolute;
+    width: 1920px;
+    height: 95px;
+    background: #466E47;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#pcw {
+    position: absolute;
+    width: 600px;
+    height: 265px;
+    left: 654px;
+    top: 208px;
+    background: url(../img/PC.png);
+}
+
+.h3 {
+    color: #333;
+    font-family: Inter;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    position: absolute;
+    width: 603px;
+    height: 72px;
+    left: 651px;
+    top: 540px;
+}
+
+#p_1{
+    color: #f6eed0;
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 30px;
+    opacity: 1;
+    position: absolute;
+    width: 117px;
+    height: 38px;
+    left: 755px;
+    top: 710px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

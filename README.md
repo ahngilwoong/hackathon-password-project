@@ -25,7 +25,7 @@
 
 ## 개발 환경
 * Spring Boot
-* MYSQL AND JPA 방식
+* Mysql & Jpa 
 * View Template => ThymeLeaf
 * 디자인
 
